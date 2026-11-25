@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Expense Tracker</h1>
+
+        <!-- Budget and Expense Section -->
+
+        <div class="top-section">
+
+            <div class="card">
+                <h2>Set Budget</h2>
+
+                <input type="number" id="budget" placeholder="Enter your budget" min="0" step="0.01">
+
+                <button onclick="setBudget()">Set Budget</button>
+            </div>
+
+            <div class="card">
+                <h2>Add Expense</h2>
+
+                <input type="text" id="title" placeholder="Expense title">
+
+                <input type="number" id="cost" placeholder="Expense amount" min="0" step="0.01">
+
+                <button id="expenseButton" onclick="addExpense()">Add Expense</button>
+            </div>
+
+        </div>
+
+        <!-- Summary Section -->
+
+        <div class="summary">
+
+            <div>
+                <h3>Total Budget</h3>
+                <p id="budgetAmount">0</p>
+            </div>
+
+            <div>
+                <h3>Total Expense</h3>
+                <p id="expenseAmount">0</p>
+            </div>
+
+            <div>
+                <h3>Remaining Balance</h3>
+                <p id="balanceAmount">0</p>
+            </div>
+
+        </div>
+
+        <!-- Expense List -->
+
+        <div class="expense-card">
+
+            <h2>Expense History</h2>
+
+            <div id="expenseList">
+                <p class="empty-message">No expenses added yet.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

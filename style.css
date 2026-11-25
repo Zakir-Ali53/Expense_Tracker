@@ -1,0 +1,335 @@
+/* General CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6fb;
+    color: #333;
+    padding: 30px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 35px;
+    color: #222;
+}
+
+/* Top Section */
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 25px;
+}
+
+.card {
+    background: #fff;
+    padding: 28px;
+    width: 50%;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+}
+
+.card h2 {
+    font-size: 22px;
+    margin-bottom: 22px;
+}
+
+/* Input Fields */
+
+.card input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    outline: none;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.card input:focus {
+    border-color: #4c6ef5;
+    box-shadow: 0 0 5px rgba(76, 110, 245, .2);
+}
+
+/* Remove Number Input Arrows */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Buttons */
+
+.card button {
+    width: 100%;
+    padding: 14px;
+    background: #4c6ef5;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.card button:hover {
+    background: #364fc7;
+    transform: translateY(-2px);
+}
+
+/* Summary Section */
+
+.summary {
+    margin-top: 30px;
+    background: #4c6ef5;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 12px;
+}
+
+.summary h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.summary p {
+    font-size: 27px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+/* Expense History */
+
+.expense-card {
+    margin-top: 30px;
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .07);
+}
+
+.expense-card h2 {
+    font-size: 22px;
+    margin-bottom: 22px;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 16px;
+    margin-bottom: 12px;
+    background: #f8f9fa;
+    border-left: 5px solid #4c6ef5;
+    border-radius: 7px;
+    min-width: 0;
+}
+
+.expense-item span {
+    overflow-wrap: anywhere;
+}
+
+.expense-amount {
+    font-weight: bold;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+.actions i {
+    cursor: pointer;
+    font-size: 17px;
+    transition: .3s;
+}
+
+.edit-icon {
+    color: #4c6ef5;
+}
+
+.delete-icon {
+    color: #fa5252;
+}
+
+.actions i:hover {
+    transform: scale(1.2);
+}
+
+.empty-message {
+    text-align: center;
+    color: #888;
+    padding: 20px;
+}
+
+/* Large Screens */
+
+@media (min-width: 1200px) {
+
+    .container {
+        max-width: 1150px;
+    }
+
+}
+
+/* Tablet Responsive */
+
+@media (max-width: 992px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .summary {
+        padding: 25px 15px;
+    }
+
+    .summary p {
+        font-size: 23px;
+    }
+
+}
+
+/* Mobile and Small Tablet */
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .top-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .summary {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 28px 15px;
+    }
+
+    .summary h3 {
+        font-size: 16px;
+    }
+
+    .summary p {
+        font-size: 25px;
+    }
+
+}
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .card,
+    .expense-card {
+        padding: 18px;
+    }
+
+    .card h2,
+    .expense-card h2 {
+        font-size: 19px;
+    }
+
+    .card input {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .card button {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .expense-item {
+        gap: 8px;
+        padding: 12px 9px;
+    }
+
+    .expense-item span {
+        font-size: 13px;
+    }
+
+    .actions {
+        gap: 11px;
+    }
+
+    .actions i {
+        font-size: 15px;
+    }
+
+    .summary {
+        padding: 25px 12px;
+    }
+
+}
+
+/* Extra Small Mobile */
+
+@media (max-width: 350px) {
+
+    .expense-item {
+        flex-wrap: wrap;
+    }
+
+    .actions {
+        margin-left: auto;
+    }
+
+    .summary p {
+        font-size: 21px;
+    }
+
+}
